@@ -1,0 +1,401 @@
+/* Reset */
+/* duda, con syles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(52, 61, 77);
+    /*overflow: hidden;*/
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+/* MENU HAMBURGESA CSS */
+.hamb { 
+    position: absolute; 
+    right: 10px; 
+    top: 50%; /* Alinea verticalmente al centro */
+    transform: translateY(-50%); /* Centra verticalmente */
+    cursor: pointer;
+    
+}
+
+.hamb-line {
+    background-color: white;
+    display: block;
+    height: 2px; /* ancho de la lineas */
+    width: 24px; /* largo de la lineas */
+    position: relative;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px; /*separación de linea abajo*/
+}
+.hamb-line::after {
+    top: -5px; /* separación de linea arriba */
+}
+
+.side-menu {
+    display: none;
+}
+
+/* Mostrar cuando se hace el checkbox */
+/* Sin el position y sin el top, funciona perfecto en la cabecera, pero resto de la pagina no funciona */
+.side-menu:checked ~ .nav {
+    max-height: 100%;
+    position: fixed; /*ajuste en pantallas pequeñas, no se abría menu aguanta hasta 601px */
+    top: 82px; /*ajuste en pantallas pequeñas, no se abría menu aguanta hasta 601px */
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/* pantallas grandes */
+@media screen and (min-width: 1066px){
+
+    /* Logo */
+    .logo {
+        float: left;
+        margin-right: 20px; 
+        margin-left: 5px;
+    }
+
+    #logo-img {
+        width: 150px;
+        height: auto;
+    }
+
+    /* H1 insertado */
+    h1 {
+        display: inline-block;
+        font-size: 5em; 
+        color: white;
+    }
+
+    /* Header */
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        /*padding: 10px; */ /* espacio alrededor del encabezado */
+    }
+
+    /* Nav */
+    .nav {
+        display: flex;
+        margin-right: 80px;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex; /* alinear los elementos horizontalmente */
+    }
+
+    .menu li {
+        margin: 0 13px; /* Espacio entre elementos del menú ajustado cambio de resolución */
+        position: relative; 
+    }
+
+    .menu a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+        color: #8CEFE9;
+    }
+
+    /* Submenú de SerFans */
+    .menu ul {
+        display: none; /* submenú oculto */
+        position: absolute; 
+        top: 100%; /* para salir debajo de SerFans */
+        left: -20px; /* para centarlo aproximadaemante */
+        background-color: rgba(52, 61, 77); /* no me gusta transparente */
+        padding: 5px;
+        z-index: 100; /* Asegura que el submenu se muestre encima del contenido */
+        /*para que funcione en el header tiene que ocultarse la linea de overflow */
+    }
+    
+
+    .menu li:hover ul { /* Mostrar el submenu SerFans */
+        display: block; 
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+        list-style: none;
+    }
+
+    .menu ul li a {
+        color: #8CEFE9; /* cambio el color para que se vea más estetico */
+        padding: 5px 10px; /*se ajusta la presentación */
+        font-size: 14px; /* reduzco tamaño y ajusto previametne con left en .menu ul */
+      
+    }
+
+    .menu ul li a:hover {
+        text-decoration: none;
+        background-color: transparent;
+        color: white; 
+    }
+    /* Para que no se vea el menu hamburgesa */
+    .hamb{
+        display: none;
+    }
+   
+    /* Icono de login */
+    #icono-login {
+        position: absolute;
+        right: 10px;
+        margin-right: 0;
+        margin-left: 0; /* Siempre alinear a la derecha */
+        display: flex; /* Alinear contenido a la derecha */
+        align-items: center; /* Alinear elementos verticalmente */
+    }
+
+    #icono-imagen {
+        width: 20px;
+        height: auto;
+        margin-right: 5px; /* Añadir espacio entre la imagen y el texto */
+    }
+
+    #parrafo-login {
+        margin: 0; /* Eliminar márgenes predeterminados */
+        font-weight: bold;
+        font-size: 12px;
+        color: #8CEFE9;
+    }
+    #parrafo-login:hover{
+        color:white;
+    }
+
+}
+
+/* pantallas medianas */
+@media screen and (max-width: 1066px) {
+
+    .hamb{
+        margin-right: 70px;
+    }
+    /* Logo */
+    .logo {
+    float: left;
+    margin-right: 20px; 
+    margin-left: 5px;
+    }
+
+    #logo-img {
+        width: 150px;
+        height: auto;
+    }
+    
+    h1 {
+        display: inline-block;
+        margin-left: -100px;
+        font-size: 5em;
+        color: white;   
+    }
+    /* Nav */
+    .nav {
+        position: fixed;
+        left: 0;
+        background-color: rgba(52, 61, 77);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        max-height: 0%;
+        transition: max-height .5s ease-out;
+       
+       
+    }
+    
+    .menu {
+        list-style: none;
+        text-align: center;
+        
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    
+    .menu a {
+        font-size: 25px;
+        color: white;
+        padding: 10px 20px;
+        display: block;
+    }
+    
+    /* submenu de SerFans */
+    .menu ul {
+        display: none; /* submenu oculto */
+        background-color: rgba(52, 61, 77); 
+        padding: 10px; 
+    }
+   
+    .menu li:hover ul {
+        display: block; /* Mostrar el submenu SerFans */
+    }
+    
+    .menu ul li {
+        margin: 5px 0;
+        list-style: none;
+    }
+    
+    .menu ul li a {
+        color: #8CEFE9; /* color del texto del submenu */
+        padding: 5px 10px; 
+        display: block; 
+    }
+    
+    .menu ul li a:hover {
+        text-decoration: none;
+        background-color: transparent; 
+    }  
+
+     /* Icono de login */
+     #icono-login {
+        position: absolute;
+        top: 31px;
+        right: 10px;
+        margin-right: 0;
+        margin-left: 0; /* Siempre alinear a la derecha */
+        display: flex; /* Alinear contenido a la derecha */
+        align-items: center; /* Alinear elementos verticalmente */
+    }
+    
+    #icono-imagen {
+        width: 20px;
+        height: auto;
+        margin-right: 5px; /* Añadir espacio entre la imagen y el texto */
+    }
+    
+    #parrafo-login {
+        margin: 0; /* Eliminar márgenes predeterminados */
+        font-weight: bold;
+        font-size: 12px;
+        color: #8CEFE9;
+    }   
+
+    #parrafo-login:hover{
+        color:white;
+    }
+
+}
+/* pantallas pequeñas */
+@media screen and (max-width: 628px) {
+
+
+    .side-menu:checked ~ .nav {
+        max-height: 100%;
+        position: fixed;  /*ajuste en pantallas pequeñas, no se abría menu */
+        top: 35px;         /*ajuste en pantallas pequeñas, no se abría menu */
+    }
+
+    .hamb{
+        margin-right: 80px;
+    }
+    #logo-img {
+        width: 65px;
+        height: auto;
+    }
+    /* H1 insertado */
+    h1 {
+        margin-top: 5px;
+        display: inline-block;
+        margin-right: -2px;
+        font-size: 1.8em;
+        color: white;  
+    }
+
+    .menu a {
+        font-size: 18px;
+        color: #8CEFE9;
+        padding: 10px 20px;
+        display: block;
+    }
+    .menu ul li a {
+        color: white; /* color del texto del submenu */
+        padding: 5px 10px; 
+        display: block; 
+    }
+
+     /* Icono de login */
+     #icono-login {
+        position: absolute;
+        top: 9px;
+        right: 10px;
+        margin-right: 0;
+        margin-left: 0; /* Siempre alinear a la derecha */
+        display: flex; /* Alinear contenido a la derecha */
+        align-items: center; /* Alinear elementos verticalmente */
+    }
+    
+    #icono-imagen {
+        width: 20px;
+        height: auto;
+        margin-right: 5px; /* Añadir espacio entre la imagen y el texto */
+    }
+    
+    #parrafo-login {
+        margin: 0; /* Eliminar márgenes predeterminados */
+        font-weight: bold;
+        font-size: 12px;
+        color: #8CEFE9;
+    }
+
+    #parrafo-login:hover{
+        color:white;
+    }
+}
+/*
+@media screen and (max-width: 437px) {
+
+    #logo-img {
+        width: 100px;
+        height: auto;
+    }
+    /* H1 insertado */
+   /* h1 {
+        margin-top: 10px;
+        display: inline-block;
+        margin-right: -25px;
+        font-size: 3.0em;
+        color: white;  
+    }
+/*}
+*/

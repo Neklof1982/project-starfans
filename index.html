@@ -1,0 +1,228 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- UTF-8 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarFanS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--Comentado en clase, he separado al final el CSS del Header-->
+    <link rel="stylesheet" href="styles/stylesIndex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <!-- Información de: https://www.youtube.com/watch?v=-CrnK3O01dU-->
+    <link rel="icon" href="images/icons8-soldado-de-asalto-96.ico">
+    
+<!-- Nota #Leer más..., navegara a otras páginas del sitio web, lo he dejado así de momento-->        
+</head>
+<!-- BODY -->
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- Para hacer el header con img, h1 y nav a mi gusto -->
+        <a href="#" class="logo">
+            <img id="logo-img" src="images/LogotipoModificadoversion2.png" alt="Logo de StarFanS"></a> 
+            <h1>StarFans</h1>       
+            <input type="checkbox" id="side-menu" class="side-menu">
+            <!-- Aquí utilizamos un span para las tres líneas del menú hamburguesa -->
+            <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+        <!-- Ocultamos el input del checkbox visualmente -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#Principal">Principal</a></li>
+                <li><a href="#Conocimiento">Conocimiento</a></li>
+                <li><a href="#Nosotros">Nosotros</a></li>
+                <li><a href="#SerFanS">SerFanS</a>
+                    <!-- La parte del submenú si se puede apuntará a parte de SerFanS con anclas-->
+                    <ul>
+                        <li><a href="#SerFans1">Descripción</a></li>
+                        <li><a href="#SerFans2">Oferta</a></li>
+                        <li><a href="#SerFans3">Academia</a></li>
+                    </ul> 
+                </li>    
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    <a href="./pages/login.html" id="icono-login">
+        <img id="icono-imagen" src="./images/login3.png" alt="Registrarse">
+        <p id="parrafo-login" >LOG IN</p>
+    </a>      
+    </header>  
+    <!--   Antes de la versión 6.0
+    <header>
+        <img id="logo" src="images/LogotipoModificadoversion2.png"/>
+        <h1>StarFans</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#Principal">Principal</a></li>
+                <li><a href="#Conocimiento">Conocimiento</a></li>
+                <li><a href="#Nosotros">Nosotros</a></li>
+                <li><a href="#SerFanS">SerFanS</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>  -->    
+    <!-- MAIN -->
+    <main>
+        <!-- Sección superior -->
+        <section id="superior">
+            <!-- Parte de arriba con imagen y articulo -->
+            <section id="arriba">
+                <img id="imgPiramide" src="images/fraseInglesMaythePiramide.png"/>
+                <section id="Galaxia1">
+                    <!-- <h2>Únete a una Galaxia muy muy lejana...</h2> esto va dentro de articulo -->
+                    <article id="Galaxia2">
+                        <h2>Únete a una Galaxia muy muy lejana...</h2>
+                        <p>Hoy en día cuando hablamos de Star Wars, nos referimos a una de las mayores franquicias existentes.</p>
+                        <p>Star Wars habla de política, de economía, de filosofía, de psicología y de religión, trata de la redención y del feminismo, explica el terrorismo, la paternidad, el Derecho Constitucional y hasta la ley del matrimonio homosexual.</p>
+                        <a id="botonGalaxia3" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a>
+                    </article>
+                    <!-- <a id="botonGalaxia3" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a> -->
+                </section>
+            </section>
+            <!-- Parte de abajo con video y articulo -->
+            <section id="abajo">
+                <section id="VacioLeft">    
+                </section>
+                <section id="video">
+                    <!-- autoplay en video, revisar para navegadores -->
+                    <article id="videoTexto">
+                        <h2>Próximamente...</h2>
+                        <video id= "duelo" src="videos/dueloVidaReal.mp4" controls></video>
+                        <p id ="parrafo1">Estilos de lucha con sable laser</p>
+                        <p id ="parrafo2">Conoce las formas de lucha con sable laser que usan los Jedi en sus combates</p>
+                        <a id="Avance" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a>
+                    </article>
+                    <!--<a id="Avance" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a> -->
+                </section>
+                <!-- Enlace a Disney+ y PRC en uso -->
+                <section id= "Comic">
+                    <article id="comicArticulo">
+                        <img id="Visions" src="images/CortoVision1.webp" alt="StarFanS"/>
+                        <h2>Star Wars se abre al sol naciente</h2>
+                        <p>Después de muchos años, muchos real StarFanS, están a punto de presenciar la fusión de dos conceptos apasionantes: Star Wars y el anime.</p>  
+                        <p>Noticia relevante:</p>
+                        <p> Se lanza el primer Manga basado en el capítulo número 1 de Visions, que ahora podemos disfrutar en Disney+.</p>
+                        <!--<ul id="comicCompra">
+                            <li><a href="https://www.disneyplus.com/es-es">Disney</a></li>
+                            <li><a href="https://prhcomics.com/book/?isbn=9780593358665">Penguin Random House</a></li>
+                        </ul> -->
+                        <a id="Disney" href="https://www.disneyplus.com/es-es" title="Disney+"><img src="images/disney-plus-logo.webp" alt="Disney+"></a>
+                        <a id="Penguin" href="https://prhcomics.com/book/?isbn=9780593358665" title="Pengiuin Random House"><img src="images/penguin.png" alt="Penguin Random House"></a>
+                    </article>
+                </section>
+                <section id="VacioRight">    
+                </section>
+            </section>
+        </section>
+        <!-- Parte de Contenido, introducción al html próximo de contenido -->
+        <section id="Contenido">
+
+            <section id="Libros">
+                <h3>Libros</h3>
+                <img id="fondoLibro" src="images/FondodeLibros.jpeg" alt="StarFanS"/>
+                <img id="iconoLibro" src="images/librosv4.jpg" alt="StarFanS"/>
+                <p id="parrafoWhite">¿Qué tema te interesa?</p>
+                <p>¿Qué tipo de lectura prefieres?</p>
+                <a id="botonConocimiento" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a>
+            </section>
+
+            <section id="Vehiculos">
+                <h3>Vehículos</h3>
+                <img id= "fondoVehiculo" src="images/FondodeVehiculos.jpeg" alt="StarFnas"/>
+                <img id= "iconoVehiculo" src="images/Xwing-rojo5.jpg"  alt="StarFnas"/>
+                <p id="parrafoWhite">¿Qué te gustaría pilotar?</p>
+                <p>Vehículos que te interesan</p>
+                <a id="botonConocimiento" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a>
+            </section>
+
+            <section id="Personas">
+                <h3>Personajes</h3>
+                <img id= "fondoPersonaje" src="images/FondodePersonaje.jpeg" alt="StarFnas"/>
+                <img id= "iconoPersonaje" src="images/kenobi.jpg"  alt="StarFnas"/>
+                <p id="parrafoWhite">¿A quién quieres conocer?</p>
+                <p>Personajes de esta Galaxia</p>
+                <a id="botonConocimiento" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a>
+            </section>
+
+        </section>
+        <!-- Imagen de Star wars, hace de forma natural una seperación entre Cotendio y SerFanS -->
+        <section id="Separador">
+            <img id= "banner" src="images/posiblebanner.webp" alt="StarFanS"/>
+        </section>
+
+        <!-- Parte de SerFanS, introducción al html próximo -->
+        <section id="SerFan">
+            <h3>¿Eres un auténtico real StarFans?</h3>
+            <p>Si te levantas siendo un apasionado de StarFanS, únete a nosotros. Siempre estamos en busca de más entusiastas para que nuestra comunidad crezca.</p>
+            <a id = "botonContacto" href="#Leer más..."title="Leer más..."><img src="images/image(6).png" alt="Leer más..."></a>
+            <!-- <a id="botonContacto" href="#Contacto">Contacto</a> -->
+            <!-- <img id="fondoCruzado" src="images/sablescruzados.jpg" alt="StarFanS"/> -->
+            <img id="fondoCruzado" src="images/Sw_ap1.webp" alt="StarFanS"/>
+        </section>
+
+    </main>
+        <!-- FOOTER -->
+    <footer>
+            <!-- Parte superior, suscribirse -->
+            <section id="footerUp">
+                <section id="Suscríbirse">
+                    <h4>¡Suscríbete!</h4>
+                    <p>¡Date de alta para estar al día de las noticias!</p>
+                    <!-- Formulario revisable -->
+                    <form id="miFormulario" action="#fomulario" method="post" novalidate>
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" 
+                            pattern="[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-])+@[a-zA-Z0-9]([^@&%$\/\(\)=?¿!\.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" 
+                            size="30" autocomplete="off" required>
+                        <button type="submit" id="Enviar">
+                            <img  src="images/Recorte -EnviarMinusculasFondocolor.jpg" alt="Enviar">
+                        </button>
+                    </form>
+                    <p>¡Gracias por suscribirte!</p>
+                </section>
+            </section>
+        <!-- Parte inferior, contacto, info, redes, quickmenu -->
+        <section id="footerDown">
+            <section id="Descripcion">
+                <h4>StarFans</h4>
+                <p>Una página de un fan para otros muchos fans, la galaxia es un universo enorme para disfrutarlo solo.</p>
+            </section>
+
+            <section id="Contacto">
+                <h4>Contacto</h4>
+                <p>Calle Antonio García Moreno, 5 </p>
+                <p>29651 Las Lagunas de Mijas, Málaga</p>
+                <p>jromrei026@g.educaand.es</p>
+                <p>Telf: (+34) 951 26 87 58.</p>
+            </section>
+
+            <section id= "MenuRapido">
+                <h4>Menú rápido</h4>
+                <!-- Duda para resolver "<li>" quizás no sea necesario-->
+                <ul>
+                    <li><a href="#Conocimiento">Conocimiento</a></li>
+                    <li><a href="#Nosotros">Nosotros</a></li>
+                    <li><a href="#Principal">Principal</a></li>
+                </ul>
+            </section>
+
+            <section id="Redes">
+                <h4>Síguenos en Redes</h4>
+                <a id="Facebook" href="https://www.facebook.com/es-es" title="Facebook"><img src="images/icons8-facebook-50.png" alt="Facebook"></a>
+                <a id="Instagram" href="https://www.instagram.com/es-es" title="Instagram"><img src="images/icons8-instagram-50.png" alt="Instagram"></a>
+                <a id="Twitter" href="https://twitter.com/?lang=es" title="Twitter"><img src="images/icons8-twitterx-50.png" alt="Twitter"></a>
+                <a id="Youtube" href="https://www.youtube.com/es-es" title="Youtube"><img src="images/icons8-youtube-50.png" alt="Youtube"></a>    
+            </section>
+        
+        </section>
+        <p id="Copy">&copy;2024 by jromrei026. Creado con VSCode en LDM</p>
+    </footer>
+    
+</body>
+
+<script src="./js/validarSub.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css"></link>
+
+</html>

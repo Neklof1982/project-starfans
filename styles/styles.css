@@ -1,0 +1,912 @@
+/*** Reseteo propiedades ***/
+*   {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Nota Abraham, me has indicado el tema de los espacios, lo mantengo aun separado
+para orientarme al igual que los bordes los uso para situarme en la pagina*/
+/*Las notas que ido dejamdo, son posit con dudas que tengo*/
+body{
+    background-color: #0b1321; 
+    font-family: 'Questrial', sans-serif;
+   
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color:white;
+}
+/*** HEADER ***/
+/*
+header{ 
+    /*Este es el bueno*//*
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    /* width: 100%;
+    height: 150px;*/
+    /*** Prueba con RGBA ***/
+    /*Transparencia*/
+    /*background-color: rgba(52, 61, 77, 0.5); */
+    /*Sin Transparencia*//*
+    background-color: rgba(52, 61, 77); 
+
+    /* este es el malo 
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    /*border: 4px solid wheat; para situarme
+    position: sticky;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: rgba(52, 61, 77)*//*
+
+}
+/*
+header #logo, h1, nav {
+    max-width: 50%;
+    max-width: 33%;
+}
+*//*
+header #logo{
+    /*border: 2px solid red; */
+    /*position: absolute;*/
+    /*** En pruebas ***/
+    /*margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 30px;*/
+    /*width: 5%;*//*
+    flex: 1;
+    object-fit: contain;
+    width: 200px;
+    height: 175px;
+    object-position: left;
+}/*
+header h1{ 
+    /*border: 2px solid red;*//*
+    flex:1;
+    /*display: flex;*//*
+    justify-content: center;
+    font-weight: bold;
+    font-size: 100px;
+    color: white;   
+    margin: auto;
+}
+/*** MENU HAMBURGUESA ***//*
+header nav {
+    flex:1;
+    margin: auto;
+    font-size: 16px;
+    font-weight: bold;
+    
+    /*font-size-adjust: inherit;*/  /*
+}
+header nav ul li {
+    text-decoration: none;
+    display: inline-block;
+    /*** Diferenes ajustes **/     /*   
+
+}
+/*Item que pedias espero*//*
+header nav ul li a:hover {
+    /* Cambia el color al pasar el mouse sobre los enlaces *//*
+    color: #fff; 
+}  
+*/     
+/*** MAIN ***/
+main{
+    width: 100%;
+}
+/*** Imagen de Fondo ***/
+main #superior {
+    background-image: url(../images/star-wars-pyramidal-vector-logo.png);
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    background-size: cover;
+    /* border: 1px solid red; para situarme*/
+}
+/*** Section Arriba  ***/          
+main #arriba{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+/*** Imagen Piramide Ingles Star Wars ***/
+main #imgPiramide{
+    flex: 1;
+    overflow: hidden;
+    margin-left: 5px; /* 04.03.24 revisado presentación tras hablar con Abraham */
+    /*object-fit: contain;*/
+    /*border: 15px solid orangered; para situarme*/
+    /*height: 800px;*/
+    /*width: 50%;*/
+}                 
+/*** Section Galaxia 1  ***/
+main #Galaxia1{
+    /*border: 8px solid yellow; para situarme*/
+    /*width:100%;*/
+    /*padding-bottom: 200px;*/
+    flex:1;   
+
+}
+main #Galaxia2 h2{  
+    margin-left: 10px; /* 04.03.24 revisado presentación tras hablar con Abraham */
+    line-height: 1.5;
+    font-size: 80px;
+    font-weight: bold;
+    color: #8CEFE9;
+}
+main #Galaxia2 p{  
+    /*border: 2px solid orange; para situarme */
+    margin-left: 10px; /* 04.03.24 revisado presentación tras hablar con Abraham */
+    line-height: 3;
+    font-size: 22px;
+    color:#8B95A6;
+}          
+/*** Botón para ir a conocimiento ***/
+/***
+main #botonGalaxia3{
+    border:2px solid #8CEFE9;  para situarme
+    border-radius: 5%;
+    background-color: #8CEFE9;
+    font-size: 30px;    
+}    
+***/
+main #Galaxia2 #botonGalaxia3 img{
+    /*border: 2px solid yellow; para situarme */
+    border-radius: 20%;
+    width: 150px;
+    height: 65px;
+    padding: 10px;
+    position: relative;
+    right: -40%;
+    /*position: absolute;
+    top: 80%; */
+    /*left: 75%;
+    /*right: 50%;  
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho*/
+    /*transform: translateX(-50%);*/
+    margin-top: 30px;
+}
+
+main #botonGalaxia3:hover img {
+    border: 2px solid #8CEFE9;
+    box-sizing: border-box;
+} 
+/*** Section Abajo  ***/ 
+
+/*** Section Video ***/
+main #abajo{
+    display: grid;
+    grid-template-areas: 
+    "VacioLeft video"
+    "Comic VacioRight";
+    grid-template-columns: auto auto auto auto; /* Dos columnas */
+    grid-gap: 20px; /* Espacio entre las áreas */
+}
+main #videoTexto, #comicArticulo h2{  
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: #8CEFE9;
+}
+/** Parte del video**/
+main #video{
+    grid-area: video; 
+    border-radius: 5%;
+    /*box-shadow: 0 0 30px rgba(52, 61, 77, 0.7);*/
+    background-color: rgba(52, 61, 77, 0.5);
+    /*width: 45%;*/
+    padding: 20px;
+    margin: 30px;
+
+    /*border: 5px solid lightcoral; */
+    margin-left: auto;
+
+}
+main #videoTexto{
+    /*width: 50%;*/
+    font-size: 22px;
+}
+main #videoTexto #parrafo1{
+    padding-top: 10px;
+    font-weight: bolder;
+    color: white;
+}  
+main #videoTexto #parrafo2{  
+    line-height: 3;
+    padding-top: 10px;
+    font-size: 16px;
+    color:#8B95A6;
+}  
+/***                  
+main #Avance{   
+    border:2px solid #8CEFE9;
+    border-radius: 5%;
+    background-color: #8CEFE9;
+    font-size: 30px;             
+}   
+***/
+main #superior #abajo #video #videoTexto #Avance img {
+    /*border: 4px solid yellow;*/
+    border-radius: 20%;
+    width: 150px;
+    height: 65px;
+    padding: 10px;
+    /*position: absolute;
+    /*top: 80%;
+    left: 50%;  
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho*/
+    /*transform: translateX(-50%);*/
+}    
+main #abajo #video #videoTexto #Avance:hover img {
+    border: 2px solid #8CEFE9;
+    box-sizing: border-box;
+}  
+/** Parte de la información del comic**/
+main #Comic{
+    grid-area: Comic; /* Coloca esta sección en el área 'libros' */
+    /*border: 8px solid yellow;  /*para situarme*/
+    width: 50%;
+    display: grid;
+    margin-right: auto;
+    margin-left: 50px; /* 04.03.24 revisado presentación tras hablar con Abraham */
+}                      
+/*#comicArticulo{                   
+    /*height: 50%;*/
+    /*width: 50%;*/
+/*}*/
+main #Visions{                            
+    border-radius: 20%;
+    height: 75px;
+    width: 75px;
+    border: 5px solid white;
+}  
+main #comicArticulo p{  
+    line-height: 2;          
+    padding-top: 20px;
+    text-align: left;
+    font-size: 20PX;
+    color:#8B95A6;
+}
+/*#comicCompra{
+    /* width:50% ;
+    border: 2px solid #8CEFE9;
+    border-radius: 5%;
+    background-color: #8CEFE9;
+    font-size: 30px;
+    /*margin: auto;*/
+/*}*/ 
+main #Disney img, #Penguin img {   
+    /*border:2px solid #8CEFE9;*/
+    border-radius: 20%;
+    /*background-color: #8CEFE9;*/
+    /*font-size: 30px;      */     
+    width: 150px;
+    height: 75px;
+    padding: 10px;
+    margin-left: 150px;
+}
+main #Disney:hover img, #Penguin:hover img {
+    border:2px solid #8CEFE9;
+}
+/*Parte de sección Contenido, lanzara a la parte de contenido*/
+/* Revisar con Abraham*/
+main #Contenido {     
+    /*border:2px solid #8CEFE9;  para situarme*/
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+main #Contenido h3, main #Contenido p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main #Contenido #parrafoWhite {
+    position: absolute;
+    top: 210px; /*cambiar en responsive */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+} 
+/***
+main #Contenido #parrafoWhite {
+    position: absolute;
+    left: 50%;
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho
+    transform: translateX(-50%);
+    color: white; 
+/*}*/ 
+
+main #Contenido h3 {
+    /*border:2px solid #8CEFE9;  para situarme*/
+    top: 165px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}   
+
+main #Contendido #parrafoWhite {
+    /*bottom: 140%;*/
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    z-index: 2;
+    } 
+
+main #Contenido p {
+    /*border:2px solid #8CEFE9;  para situarme*/
+    bottom: 30%;
+    text-align: center;
+    font-size: 19px;
+    color: #8B95A6;
+    z-index: 4;
+    font-weight: lighter;
+
+}
+/**
+main #botonConocimiento {
+    position: absolute;
+    top: 80%;
+    left: 50%;  
+    elemento se desplaza hacia la izquierda en un 50% de su propio ancho*
+    transform: translateX(-50%);
+    border: 2px solid #8CEFE9; 
+    border-radius: 5%;
+    background-color: #8CEFE9;
+    font-size: 30px;
+    text-align: center;            
+}
+**/
+main #botonConocimiento img {
+    border-radius: 20%;
+    width: 150px;
+    height: 65px;
+    padding: 10px;
+    position: absolute;
+    top: 80%;
+    left: 50%;  
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho*/
+    transform: translateX(-50%);
+
+}
+main #Libros #botonConocimiento:hover img, #Vehiculos  #botonConocimiento:hover img, #Personas #botonConocimiento:hover img {
+    border: 2px solid #8CEFE9;
+    box-sizing: border-box;
+}
+
+/** Parte comun en las tres secciones  ***/
+main #Libros, #Vehiculos, #Personas {
+    position: relative;
+    width: 33.3%;
+    height: 500px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15%; 
+    background-color: rgba(52, 61, 77, 0.5);      
+}
+
+/*** Parte de libros **/
+main #fondoLibro, main #iconoLibro {
+    position: absolute;
+    left: 50%;
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho*/
+    transform: translateX(-50%);
+}
+
+main #fondoLibro {
+    width: 85%;
+    height: 50%;
+    border-radius: 20%;
+    opacity: 0.4;
+    z-index: 1;   
+}
+
+main #iconoLibro {
+    top: 60px;
+    border: 5px solid white;
+    border-radius: inherit;
+    height: 80px;
+    width: 80px; 
+    z-index: 2;             
+}            
+
+/*** Parte de Vehículos **/
+main #fondoVehiculo, main #iconoVehiculo {
+    position: absolute;
+    left: 50%;
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho*/
+    transform: translateX(-50%);
+}
+
+main #fondoVehiculo {
+    width: 85%;
+    height: 50%;
+    border-radius: 20%;
+    opacity: 0.4;
+    z-index: 1;   
+}
+
+main #iconoVehiculo {
+    z-index: 2;
+    top: 60px;
+    border-radius: inherit;
+    border: 5px solid white;
+    height: 80px;
+    width: 80px;    
+}                 
+
+/*** Parte de Personajes **/
+main #fondoPersonaje, main #iconoPersonaje {
+    position: absolute;
+    left: 50%;
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho*/
+    transform: translateX(-50%);
+}
+
+main #fondoPersonaje {
+    width: 85%;
+    height: 50%;
+    border-radius: 20%;
+    opacity: 0.4;
+    z-index: 1;   
+}
+
+main #iconoPersonaje {
+    z-index: 2;
+    top: 60px;
+    border-radius: inherit;
+    border: 5px solid white;
+    height: 80px;
+    width: 80px;    
+}
+
+/*** Hace las veces de separador del contenido anterior al siguiente***/
+/*main #Separador{
+  /*border: 2px solid orangered; para situarme*/
+/*}*/
+main #banner{                
+    width: 100%; 
+}        
+/*** Parte de SerFanS***/
+main #SerFan{
+    /*border: 10px solid green; /*para situarme*/
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 auto;
+    
+    /*
+    background-image: url(../images/sables2.jpg);
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    background-size: cover;
+    position: relative;
+    */
+}
+
+main #fondoCruzado{
+    position: relative;
+    opacity: 0.3;
+    z-index: 1;
+    max-height: 600px;
+    width: 100%;
+    /*bottom: 100px;*/
+}
+
+main #SerFan h3{  
+    /*border: 2px solid orangered; para situarme*/
+    line-height: 1;
+    position: absolute;
+    z-index: 2;
+    width: 80%;
+    left: 5%;
+    top: 4%;
+    font-size: 40px;
+    color: #8CEFE9;
+    
+}
+/*
+main #botonContacto{
+    position: relative;
+    border: 2px solid orangered; para situarme
+    border-radius: 5%;
+    background-color: #8CEFE9;
+    font-size: 30px;
+    text-align: center;
+    left: 10%;
+    z-index: 2;
+    bottom: 200px;
+}
+*/
+
+main #SerFan #botonContacto img {
+    border-radius: 20%;
+    width: 150px;
+    height: 65px;
+    padding: 10px;
+    position: absolute;
+    top: 70%;
+    /*left: 25%;*/
+    z-index: 4;  
+    left: 5%;
+    /* elemento se desplaza hacia la izquierda en un 50% de su propio ancho*/
+
+}
+main #SerFan #botonContacto:hover img{
+    border: 2px solid #8CEFE9;
+    box-sizing: border-box;
+
+}
+main #SerFan p{
+    /*border: 2px solid orangered; para situarme*/
+    line-height: 1.5;
+    position: absolute;
+    /*text-align: justify, center;*/
+    font-size: 20px;
+    width: 80%;
+    left: 5%;
+    /*color: yellow;*/ /*para buscar*/
+    color: white;
+    z-index: 3;
+    font-weight: lighter;
+    top: 30%;
+}           
+/*** FOOTER ***/
+footer{
+    /*border: 4px solid rebeccapurple; para situarme*/
+    width: 100%;
+    position: relative;
+    /*min-height: 400px;*/
+    background-color: rgba(52, 61, 77);
+    
+}
+footer #footerUp{
+    text-align: center;
+    /*border: 4px solid brown;  */ /*para situarme*/
+    width: 95%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*Para hacer la linea inferior*/
+    border-bottom: 2px solid #8B95A6;
+    margin-left: 20px;
+}
+footer #footerUp h4 {
+    padding-bottom: 1%;
+    color: #8CEFE9;
+    font-size: 40px;   
+}
+footer #footerUp #Enviar img {
+    border-radius: 20%;
+    width: 150px;
+    height: 65px;
+    padding: 10px;
+
+}
+footer #footerUp #Enviar:hover img {
+    border: 2px solid #8CEFE9;
+    box-sizing: border-box;
+    transition: border 0.3s; /* Añade una transición para el efecto hover */
+}
+/****** Formulario ******/
+
+/* Estilos para el formulario */
+#miFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Estilos para el campo de correo electrónico */
+#email {
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid #8CEFE9;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    background-color: white;
+}
+
+#label{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+#email:focus { 
+    outline: transparent;
+}
+
+#input:enabled{
+    background-color: white;
+}
+
+input:focus:valid {
+    background-color: white;
+    background: url(../images/TickVerdeFooter.png) no-repeat right center; 
+    background-size: auto 100%;
+}
+
+input:focus:invalid {
+    background: url(../images/TickRojoFooter.png) no-repeat right center; 
+    background-size: auto 100%;
+    
+}
+/* Estilos para el botón de envío */
+#Enviar {
+    background-color: transparent; /* fonde del body */
+    border: none; /* asi solo se ve el efecto de mi imagen */
+    cursor: pointer;
+    outline: none; /*evita el resaltado */
+}
+
+/******  Fin formulario  ******/
+
+footer #footerUp p{ 
+  
+    font-size: 18px;
+    color: white;
+}
+footer #footerDown{
+    display: flex;
+    justify-content: space-between;
+    /*border: 4px solid wheat; */ /*para situarme*/
+    position: relative;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: rgba(52, 61, 77)
+}            
+footer #footerDown h4 {
+    color: #8CEFE9;
+    font-size: 20px;  
+    padding-bottom: 3%;     
+}
+footer #footerDown p{  
+    font-size: 14px;
+    color: white;
+    
+}
+footer #Descripcion, #Contacto, #MenuRapido, #Redes{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 25%;
+}  
+footer #MenuRapido ul li{
+    list-style-type: none;
+    text-decoration-color: white;
+}      
+footer #MenuRapido ul li a:hover {
+    /* Cambia el color al pasar el mouse sobre los enlaces */
+    color:  #8CEFE9; 
+}
+footer #Redes {
+    width: 100%;
+}
+footer #Facebook img, #Instagram img, #Twitter img, #Youtube img {
+    border: 2px solid transparent;
+    box-sizing: border-box;
+
+}
+footer #Facebook:hover img, #Instagram:hover img, #Twitter:hover img, #Youtube:hover img {
+    /*border-radius: 150%;*/
+    border: 2px solid #8CEFE9;
+}
+           
+/***COPYRIGHT**/
+footer #Copy{
+    /*border: 2px solid yellow;*/ /*para situarme */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    margin: 0 auto;   
+    align-items: center;     
+    padding-bottom: 0.5%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    /* problema en version movil */
+    /*header{ 
+        min-height: 200px;
+        position: fixed;
+    }    
+    */
+    main #arriba {
+        flex-direction: column;
+        position: static;
+        margin-left: 10px;
+        margin-right: 5px;
+        width: 95%;
+    } 
+    main #Galaxia2 h2{ 
+        line-height: 1; 
+        font-size: 70px;
+    }    
+    main #Galaxia2 p{     
+        line-height: 1.5;
+    }  
+
+    main #abajo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-template-areas: 
+            "video"
+            "comic";
+        grid-template-columns: auto; /* Una sola columna */   
+    }
+    main #video {
+        margin: auto;
+    }
+
+    main #Comic {
+        margin: auto;
+        width: 100%;
+    }
+    main #video, main #Comic {
+        width: 90%; /* Ajusta el ancho según sea necesario */
+        
+        margin: auto; /* Centra horizontalmente */
+    }
+  
+    main #Contenido #parrafoWhite {
+        top: 200px;
+    }  
+
+       
+}
+
+@media screen and (max-width: 800px) {
+
+    main #Contenido {     
+        /*border:2px solid #8CEFE9;  para situarme*/
+        flex-direction: column;
+        position: static;
+        
+    }
+
+    main #Libros, #Vehiculos, #Personas {
+        position: relative;
+        min-width: 100%;
+        margin-left: 0;
+        border-radius: 15%; 
+        background-color: rgba(52, 61, 77, 0.5);      
+    }
+
+    main #Contenido p {
+        position: absolute;
+        min-width: 100%;       
+    }  
+
+}
+
+@media screen and (max-width: 600px) {
+
+   /* main #superior{
+        flex-direction: column;
+        position: static;
+    }*/
+    /*
+    main #superior #arriba {
+        flex-direction: column;
+        
+        position: static;
+    }
+    */
+    main #Galaxia2 h2{ 
+        margin-top: 5%;
+        line-height: 1; 
+        font-size: 60px;
+    } 
+    main #Contenido {     
+        /*border:2px solid #8CEFE9;  para situarme*/
+        flex-direction: column;
+        position: static;
+        
+    }
+    main #Galaxia2 #botonGalaxia3 img{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    main #superior #abajo #video #videoTexto #Avance img {
+         left: 50%;
+        transform: translateX(+56%);
+    }     
+    main #Disney img, #Penguin img {   
+        left: 50%;  
+        transform: translateX(-34%);
+    }
+    main #videoTexto #duelo {
+        max-width: 100%; /* Ajusta el ancho máximo del video al ancho del contenedor */
+        height: auto; /* Asegura que la altura se ajuste proporcionalmente */
+    }
+
+    main #Libros, #Vehiculos, #Personas {
+        position: relative;
+        min-width: 100%;
+        margin-left: 0;
+        border-radius: 15%; 
+        background-color: rgba(52, 61, 77, 0.5);      
+    }
+
+    main #Contenido p {
+    
+        position: absolute;
+        min-width: 100%;
+          
+          
+    }   
+    main #SerFan h3{
+        left: -0.5%;
+        width: 100%;
+        margin-bottom:5px ;
+        font-size: 28px;
+        text-align: center;
+    }
+    main #SerFan p{
+        left: 10%;
+        max-width: 100%;
+        margin-top: -5px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        text-align: center;
+        line-height: 1;
+    } 
+
+    main #SerFan #botonContacto img {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 62%;
+    }
+
+    #email {
+        width: 100%;  
+    }    
+         
+    footer #footerUp{
+        margin-left: 10px;
+    }
+    footer #footerDown {
+        flex-direction: column;
+        position: static;
+    }
+    footer #Descripcion, #Contacto, #MenuRapido, #Redes {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    footer #Copy {
+        position: static;
+        margin-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+        main #SerFan h3{
+            font-size: 20px;
+        } 
+        main #SerFan p{
+            margin-top: -15px;
+        }
+        main #SerFan #botonContacto img {
+            top: 60%;
+        }    
+}

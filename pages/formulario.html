@@ -1,0 +1,183 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- UTF-8 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarFanS</title>
+    <link rel="stylesheet" href="../styles/stylesFormulario.css">
+    <!--Separado al final el CSS del Header-->
+    <link rel="stylesheet" href="../styles/styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/icons8-soldado-de-asalto-96.ico">
+    
+<!-- #Leer más..., navegará a otras páginas del sitio web, lo he dejado así de momento-->        
+</head>
+<!-- BODY -->
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- Header con img, h1 y nav a mi gusto -->
+        <a href="#" class="logo">
+            <img id="logo-img" src="../images/LogotipoModificadoversion2.png" alt="Logo de StarFanS"></a> 
+            <h1>StarFans</h1>       
+            <input type="checkbox" id="side-menu" class="side-menu">
+            <!-- Aquí utilizamos un span para las tres líneas del menú hamburguesa -->
+            <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+        <!-- Ocultamos el input del checkbox visualmente -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="../index.html">Principal</a></li>
+                <li><a href="#Conocimiento">Conocimiento</a></li>
+                <li><a href="#Nosotros">Nosotros</a></li>
+                <li><a href="#SerFanS">SerFanS</a>
+                    <!-- La parte del submenú si se puede apuntará a parte de SerFanS con anclas-->
+                    <ul>
+                        <li><a href="#SerFans1">Descripción</a></li>
+                        <li><a href="#SerFans2">Oferta</a></li>
+                        <li><a href="#SerFans3">Academia</a></li>
+                    </ul> 
+                </li>    
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>  
+    <!--   Antes de la versión 6.0
+    <header>
+        <img id="logo" src="images/LogotipoModificadoversion2.png"/>
+        <h1>StarFans</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#Principal">Principal</a></li>
+                <li><a href="#Conocimiento">Conocimiento</a></li>
+                <li><a href="#Nosotros">Nosotros</a></li>
+                <li><a href="#SerFanS">SerFanS</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>  -->    
+    <!-- MAIN -->
+    <main>
+        
+        <form id="registro" novalidate>
+            <h6>Registro</h6>
+            <input type="text" id="campoUsuario" name="usuario" placeholder="Usuario" 
+                pattern="^[a-zA-Z0-9_\-]{4,16}"
+                size="" autocomplete="off" maxlength="16" required>
+            <span class="noValido">El usuario debe contener solo letras (mayúsculas y minúsculas), números, guiones bajos (_) y guiones (-), y tener entre 4 y 16 caracteres.</span>
+            <input type="password" id="campoPass" name="contraseña" placeholder="Contraseña" 
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&+?])(?!\s)[a-zA-Z\d#$@!%&+?]{8,16}$"
+                size="" autocomplete="off" maxlength="16" required>
+            <span class="noValido">Al menos una letra minúscula y mayúscula. Al menos un dígito.
+                Al menos un carácter especial de la lista #$@!%&+?<br>
+                La longitud entre 8 y 16 caracteres</span>
+            <span class="pass-valido">La contraseña introducida es correcta.</span>
+            <input type="password" id="campoPass2" name="repetirContraseña" placeholder="Repetir contraseña" size="" maxlength="16" autocomplete="off" required>
+            <span class="noValido">Complete este campo.</span>
+            <input type="text" id="campoNombre" name="nombre" placeholder="Nombre" 
+                pattern="^[a-zA-ZÀ-ÿ\u00f1\u00d1' ]{1,30}$"
+                size="" autocomplete="off" maxlength="30" required>
+            <span class="noValido">El nombre debe contener solo letras y espacios, y tener entre 1 y 30 caracteres.</span>
+            <input type="text" id="campoApellidos" name="apellidos" placeholder="Apellido/s" 
+                pattern="^[a-zA-ZÀ-ÿ\u00f1\u00d1' ]{1,30}$"
+                size="" autocomplete="off" maxlength="30" required>
+            <span class="noValido">Los Apellidos debe contener solo letras y espacios, y tener entre 1 y 30 caracteres.</span>    
+            <!--<input type="text" id="campo" name="apellido2" placeholder="Apellido 2" size=""  required> --->
+            <input type="email" id="campoEmail" name="email" placeholder="Correo electrónico" 
+                pattern="^[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-])+@[a-zA-Z0-9]([^@&%$\/\(\)=?¿!\.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" 
+                size="" autocomplete="off" required>
+            <span class="noValido">Ingresa un correo electrónico válido (ejemplo@dominio.com).</span>
+            <span class="email-valido">La dirección de e-mail es correcta.</span>
+            <input type="tel" id="campoTelf" name="telefono" placeholder="Teléfono móvil" 
+                pattern="^[0-9]{9}" 
+                size="" autocomplete="off" maxlength="9" required>
+            <span class="noValido">Ingresa un número de teléfono móvil válido de 9 dígitos.</span>
+            <p>Fecha de nacimiento:</p>
+            <input type="date" id="campoFN" name="fechaNacimiento" placeholder="Fecha de nacimiento" autocomplete="off" required>
+            <span class="noValido">Selecciona tu fecha de nacimiento.</span>
+            <p>¿Deseas aplicar algún puesto?</p>
+            <input type="text" id="campoRango" list="Rango" placeholder="Rango para aplicar (opcional)">
+            <datalist id="Rango">
+                <option value="Maestro Jedi">
+                <option value="Caballero Jedi">
+                <option value="Aprendiz">
+                <option value="Contrabandista">
+            </datalist>
+            <input type="checkbox" id="politica" name="politica" value="politica" required>
+            <label for="politica" id="label"> He leído y acepto la <a id="ley" href="#Politica"><u>Política de privacidad.</u></a></label>
+            <input type="submit" id="button" value="Registrar">
+            <p><a href="./login.html">¿Ya estás registrado?, ¡Inicia sesión!</a></p>
+            <!--<p>
+                <label for="comentario">Comentarios: </label>
+                <br />
+                <textarea name="comentario" id="comentario"></textarea>
+                </p> --> 
+            <!-- prueba de ver cómo queda comentarios-->
+       </form>
+    </main>
+        <!-- FOOTER -->
+    <footer>
+            <!-- Parte superior, suscribirse -->
+            <section id="footerUp">
+                <section id="Suscríbirse">
+                    <h4>¡Suscríbete!</h4>
+                    <p>¡Date de alta para estar al día de las noticias!</p>
+                    <!-- Formulario revisable -->
+                    <form id="miFormulario" action="#fomulario" method="post" novalidate>
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" 
+                            pattern="[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-])+@[a-zA-Z0-9]([^@&%$\/\(\)=?¿!\.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" 
+                            size="30" autocomplete="off" required>
+                        <button type="submit" id="Enviar">
+                            <img  src="../images/Recorte -EnviarMinusculasFondocolor.jpg" alt="Enviar">
+                        </button>
+                    </form> 
+                    <p>¡Gracias por suscribirte!</p>
+                </section>
+            </section>
+        <!-- Parte inferior, contacto, info, redes, quickmenu -->
+        <section id="footerDown">
+            <section id="Descripcion">
+                <h4>StarFans</h4>
+                <p>Una página de un fan para otros muchos fans, la galaxia es un universo enorme para disfrutarlo solo.</p>
+            </section>
+
+            <section id="Contacto">
+                <h4>Contacto</h4>
+                <p>Calle Antonio García Moreno, 5 </p>
+                <p>29651 Las Lagunas de Mijas, Málaga</p>
+                <p>jromrei026@g.educaand.es</p>
+                <p>Telf: (+34) 951 26 87 58.</p>
+            </section>
+
+            <section id= "MenuRapido">
+                <h4>Menú rápido</h4>
+                <!-- Duda para resolver "<li>" quizas no sea necesasio-->
+                <ul>
+                    <li><a href="#Conocimiento">Conocimiento</a></li>
+                    <li><a href="#Nosotros">Nosotros</a></li>
+                    <li><a href="#Principal">Principal</a></li>
+                </ul>
+            </section>
+
+            <section id="Redes">
+                <h4>Síguenos en Redes</h4>
+                <a id="Facebook" href="https://www.facebook.com/es-es" title="Facebook"><img src="../images/icons8-facebook-50.png" alt="Facebook"></a>
+                <a id="Instagram" href="https://www.instagram.com/es-es" title="Instagram"><img src="../images/icons8-instagram-50.png" alt="Instagram"></a>
+                <a id="Twitter" href="https://twitter.com/?lang=es" title="Twitter"><img src="../images/icons8-twitterx-50.png" alt="Twitter"></a>
+                <a id="Youtube" href="https://www.youtube.com/es-es" title="Youtube"><img src="../images/icons8-youtube-50.png" alt="Youtube"></a>    
+            </section>
+        
+        </section>
+        <p id="Copy">&copy;2024 by jromrei026. Creado con VSCode en LDM</p>
+    </footer>
+    
+</body>
+
+<script src="../js/validarFormulario.js"></script>
+<script src="../js/validarSub.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css"></link>
+
+</html>
