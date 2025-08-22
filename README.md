@@ -2,8 +2,8 @@
 
 ![HTML5](https://img.shields.io/badge/HTML5-%20%2B-orange)
 ![CSS3](https://img.shields.io/badge/CSS3-%20%2B-blue) 
-![JavaScript](https://img.shields.io/badge/JavaScript-ECMAScript-yellow) 
-![SweetAlert2](https://img.shields.io/badge/SweetAlert2-%20%2B-pink) 
+![JavaScript](https://img.shields.io/badge/JavaScript-ECMAScript%206+-yellow)
+![SweetAlert2](https://img.shields.io/badge/SweetAlert2-v11-pink)
 ![JSON](https://img.shields.io/badge/JSON-%20%2B-lightgrey)
 
 **StarFanS** es una página web moderna, responsive e intuitiva diseñada para captar y gestionar usuarios que desean unirse a una comunidad de seguidores.  
